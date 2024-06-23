@@ -19,8 +19,16 @@
     "css",
     "plugin"
   ],
-  "exports": {},
-  "files": [],
+  "exports": {
+    ".": {
+      "types": "./build/default_utilities/index.d.ts",
+      "import": "./build/default_utilities/index.js",
+      "require": "./build/default_utilities/index.cjs"
+    }
+  },
+  "files": [
+    "build/default_utilities"
+  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -28,7 +36,7 @@
     "typecheck": "tsc --noEmit",
     "prebuild": "npm run format && npm run lint:fix",
     "build": "tsup",
-    "postbuild": "rm -r ./build/deleted && find ./build -name '*.cts' -type f -delete",
+    "postbuild": "find ./build -name '*.cts' -type f -delete",
     "prepublishOnly": "npm run build",
     "release": "npx release-it"
   },
