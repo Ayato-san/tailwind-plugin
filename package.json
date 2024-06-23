@@ -24,10 +24,16 @@
       "types": "./build/default_utilities/index.d.ts",
       "import": "./build/default_utilities/index.js",
       "require": "./build/default_utilities/index.cjs"
+    },
+    "./grid": {
+      "types": "./build/grid/index.d.ts",
+      "import": "./build/grid/index.js",
+      "require": "./build/grid/index.cjs"
     }
   },
   "files": [
-    "build/default_utilities"
+    "build/default_utilities",
+    "build/grid"
   ],
   "scripts": {
     "lint": "eslint .",
