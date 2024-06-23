@@ -25,6 +25,11 @@
       "import": "./build/default_utilities/index.js",
       "require": "./build/default_utilities/index.cjs"
     },
+    "./gradient_mask": {
+      "types": "./build/gradient_mask/index.d.ts",
+      "import": "./build/gradient_mask/index.js",
+      "require": "./build/gradient_mask/index.cjs"
+    },
     "./grid": {
       "types": "./build/grid/index.d.ts",
       "import": "./build/grid/index.js",
@@ -33,6 +38,7 @@
   },
   "files": [
     "build/default_utilities",
+    "build/gradient_mask",
     "build/grid"
   ],
   "scripts": {
