@@ -16,7 +16,7 @@ npm i @ayato-san/tailwind-plugin
 
 ### Utilities
 
-enabling by adding this line in 
+enabling by adding this line in
 
 ```js
 {
@@ -41,7 +41,7 @@ list of different variant
 
 ### Gradient Mask
 
-enabling by adding this line in 
+enabling by adding this line in
 
 ```js
 {
@@ -61,7 +61,7 @@ list of different classes
 
 ### Responsive Grid
 
-enabling by adding this line in 
+enabling by adding this line in
 
 ```js
 {

@@ -9,7 +9,6 @@ export default plugin(
     addVariant('child', '& > *')
     addVariant('sibling', '& + *')
     matchVariant('not-data', (value) => `&:not([data-${value}])`)
-    matchVariant('except', (value) => `&:has(${value}:hover) ${value}:not(:hover)`)
     matchVariant('group-not-data', (value) => `:merge(.group):not([data-${value}]) &`)
     matchUtilities(
       {
