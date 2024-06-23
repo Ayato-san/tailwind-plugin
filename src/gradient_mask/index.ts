@@ -14,9 +14,9 @@ function generateUtilities(): GradientUtilities {
         ...previous,
         [`${BASE_CLASS}-${shorthand}`]: (value: GradientValues) => ({
           [`--tw-gradient-${shorthand}`]: value + '%',
-          [`--tw-gradient-${side}`]: `linear-gradient(${direction}, transparent, #f00 var(--tw-gradient-${fist},0%) calc(100% - var(--tw-gradient-${last},0%)), transparent)`,
+          [`--tw-gradient-${side}`]: `linear-gradient(${direction},transparent,#fff var(--tw-gradient-${fist},0%) calc(100% - var(--tw-gradient-${last},0%)),transparent)`,
           maskImage:
-            'var(--tw-gradient-x, linear-gradient(to top, transparent,transparent), var(--tw-gradient-y, linear-gradient(to left, transparent,transparent)))',
+            'var(--tw-gradient-y,linear-gradient(to top,transparent,transparent)),var(--tw-gradient-x,linear-gradient(to left,transparent,transparent))',
         }),
       }
     },
