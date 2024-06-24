@@ -11,7 +11,7 @@
 ### Install
 
 ```bash
-npm i @ayato-san/tailwind-plugin
+npm i tailwindcss @ayato-san/tailwind-plugin
 ```
 
 ### Utilities
