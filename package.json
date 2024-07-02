@@ -1,7 +1,7 @@
 {
   "name": "@ayato-san/tailwind-plugin",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My custom tailwind plugin",
   "author": "Ayato-san <ayatosan.pro@gmail.com>",
   "license": "MIT",
