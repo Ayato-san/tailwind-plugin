@@ -1,5 +1,4 @@
-// @ts-expect-error missing types
-import plugin from 'tailwindcss/plugin'
+import plugin from 'tailwindcss/plugin.js'
 import type { PluginAPI } from 'tailwindcss/types/config.js'
 
 import { Directions } from './enums/directions.js'
@@ -24,7 +23,7 @@ function generateUtilities(): GradientUtilities {
   )
 }
 
-export default plugin(
+const gradientMask = plugin(
   ({ matchUtilities, theme }: PluginAPI) => {
     matchUtilities(generateUtilities(), { values: theme('gradientSteps') })
   },
@@ -34,3 +33,5 @@ export default plugin(
     },
   }
 )
+
+export default gradientMask

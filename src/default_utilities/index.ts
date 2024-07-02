@@ -1,10 +1,8 @@
-// @ts-expect-error missing types
-import defaultTheme from 'tailwindcss/defaultTheme'
-// @ts-expect-error missing types
-import plugin from 'tailwindcss/plugin'
+import defaultTheme from 'tailwindcss/defaultTheme.js'
+import plugin from 'tailwindcss/plugin.js'
 import type { PluginAPI } from 'tailwindcss/types/config.js'
 
-export default plugin(
+const defaultUtilities = plugin(
   ({ addVariant, matchUtilities, matchVariant, theme }: PluginAPI) => {
     addVariant('child', '& > *')
     addVariant('sibling', '& + *')
@@ -69,9 +67,7 @@ export default plugin(
     theme: {
       animationDelay: defaultTheme.transitionDelay,
       animationDuration: defaultTheme.transitionDuration,
-      textShadow: {
-        ...defaultTheme.boxShadow,
-      },
+      textShadow: defaultTheme.boxShadow,
       interact: {
         none: 'none',
         initial: 'initial',
@@ -79,3 +75,5 @@ export default plugin(
     },
   }
 )
+
+export default defaultUtilities
