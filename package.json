@@ -35,10 +35,10 @@
       "import": "./build/grid/index.js",
       "require": "./build/grid/index.cjs"
     },
-    "./trendy_bg": {
-      "types": "./build/trendy_background/index.d.ts",
-      "import": "./build/trendy_background/index.js",
-      "require": "./build/trendy_background/index.cjs"
+    "./pattern_bg": {
+      "types": "./build/pattern_background/index.d.ts",
+      "import": "./build/pattern_background/index.js",
+      "require": "./build/pattern_background/index.cjs"
     }
   },
   "files": [
@@ -69,7 +69,7 @@
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
-  "prettier": "@ayato-san/tooling-configs/prettier",
+  "prettier": "@ayato-san/tooling-configs/prettier/default",
   "publishConfig": {
     "access": "public",
     "tag": "latest"

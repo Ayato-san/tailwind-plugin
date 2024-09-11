@@ -2,12 +2,15 @@ import defaultTheme from 'tailwindcss/defaultTheme.js'
 import plugin from 'tailwindcss/plugin.js'
 import type { PluginAPI } from 'tailwindcss/types/config.js'
 
+const spacing: Record<string, any> = { height: ['100vh', '100svh'], width: ['100vw', '100svw'] }
+
 const defaultUtilities = plugin(
   ({ addVariant, matchUtilities, matchVariant, theme }: PluginAPI) => {
     addVariant('child', '& > *')
     addVariant('sibling', '& + *')
     matchVariant('not-data', (value) => `&:not([data-${value}])`)
     matchVariant('group-not-data', (value) => `:merge(.group):not([data-${value}]) &`)
+    matchVariant('peer-not-data', (value) => `:merge(.peer):not([data-${value}]) ~ &`)
     matchUtilities(
       {
         'animation-delay': (value) => ({
@@ -65,6 +68,14 @@ const defaultUtilities = plugin(
   },
   {
     theme: {
+      extend: {
+        height: { screen: spacing.height },
+        minHeight: { screen: spacing.height },
+        maxHeight: { screen: spacing.height },
+        width: { screen: spacing.width },
+        minWidth: { screen: spacing.width },
+        maxWidth: { screen: spacing.width },
+      },
       animationDelay: defaultTheme.transitionDelay,
       animationDuration: defaultTheme.transitionDuration,
       textShadow: defaultTheme.boxShadow,
