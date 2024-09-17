@@ -13,7 +13,7 @@ const defaultUtilities = plugin(
     matchVariant('peer-not-data', (value) => `:merge(.peer):not([data-${value}]) ~ &`)
     matchUtilities(
       {
-        'animation-delay': (value) => ({
+        'animation-delay': (value: string) => ({
           animationDelay: value,
         }),
       },
@@ -21,7 +21,7 @@ const defaultUtilities = plugin(
     )
     matchUtilities(
       {
-        'animation-duration': (value) => ({
+        'animation-duration': (value: string) => ({
           animationDuration: value,
         }),
       },
@@ -29,7 +29,7 @@ const defaultUtilities = plugin(
     )
     matchUtilities(
       {
-        'text-shadow': (value) => ({
+        'text-shadow': (value: string) => ({
           '--tw-text-shadow': value,
           '--tw-text-shadow-colored': value.replace(
             /rgb\(0 0 0 \/ 0\.[0-9]{1,2}\)/g,
@@ -42,7 +42,7 @@ const defaultUtilities = plugin(
     )
     matchUtilities(
       {
-        interact: (value) => ({
+        interact: (value: string) => ({
           '-webkit-user-drag': value,
           'user-drag': value,
           'user-select': value,
@@ -54,7 +54,7 @@ const defaultUtilities = plugin(
     matchUtilities(
       // define images on tailwind.config.js
       {
-        'bg-image': (value) => ({
+        'bg-image': (value: string) => ({
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'top',

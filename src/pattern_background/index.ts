@@ -45,7 +45,7 @@ const patternBackground = plugin(
     )
     matchUtilities(
       {
-        pattern: (value) => ({
+        pattern: (value: string) => ({
           '&:not(.pattern-fade)': { '--pattern-size': value },
           '&.pattern-fade::after': { '--pattern-size': value },
         }),
@@ -54,7 +54,7 @@ const patternBackground = plugin(
     )
     matchUtilities(
       {
-        pattern: (value) => ({
+        pattern: (value: string) => ({
           '&:not(.pattern-fade)': { '--pattern-front': value },
           '&.pattern-fade::after': { '--pattern-front': value },
         }),
@@ -63,7 +63,7 @@ const patternBackground = plugin(
     )
     matchUtilities(
       {
-        bg: (value) => ({
+        bg: (value: string) => ({
           '&:not(.pattern-fade)': { '--pattern-back': value },
           '&.pattern-fade::after': { '--pattern-back': value },
         }),

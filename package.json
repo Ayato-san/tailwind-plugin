@@ -60,14 +60,14 @@
     "release": "npx release-it"
   },
   "devDependencies": {
-    "@ayato-san/tooling-configs": "^1.1.1",
-    "@types/node": "^22.5.4",
-    "eslint": "^8.57.0",
+    "@ayato-san/tooling-configs": "^2.0.1",
+    "@types/node": "^22.5.5",
+    "eslint": "^9.10.0",
     "prettier": "^3.3.3",
     "release-it": "^17.6.0",
-    "tailwindcss": "^3.4.10",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4"
+    "tailwindcss": "^3.4.11",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
   },
   "prettier": "@ayato-san/tooling-configs/prettier/default",
   "publishConfig": {
