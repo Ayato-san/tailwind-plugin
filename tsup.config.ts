@@ -7,6 +7,7 @@ export default defineConfig((options) => ({
     'src/grid/index.ts',
     'src/trendy_background/index.ts',
     'src/pattern_background/index.ts',
+    'src/arkui_variants/index.ts',
     'src/lib/',
   ],
   splitting: false,

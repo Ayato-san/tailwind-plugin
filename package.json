@@ -25,6 +25,11 @@
       "import": "./build/default_utilities/index.js",
       "require": "./build/default_utilities/index.cjs"
     },
+    "./arkui_variants": {
+      "types": "./build/arkui_variants/index.d.ts",
+      "import": "./build/arkui_variants/index.js",
+      "require": "./build/arkui_variants/index.cjs"
+    },
     "./gradient_mask": {
       "types": "./build/gradient_mask/index.d.ts",
       "import": "./build/gradient_mask/index.js",
@@ -42,6 +47,7 @@
     }
   },
   "files": [
+    "build/arkui_variants",
     "build/default_utilities",
     "build/gradient_mask",
     "build/grid",
