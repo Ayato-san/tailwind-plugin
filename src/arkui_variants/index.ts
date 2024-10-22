@@ -8,10 +8,10 @@ import type { PluginAPI } from 'tailwindcss/types/config.js'
  * @param name - The name of the variant to be added.
  * @param selector - The CSS selector associated with the variant.
  */
-function overideVariant(func: PluginAPI['addVariant'], name: string, selector: string) {
+function overrideVariant(func: PluginAPI['addVariant'], name: string, selector: string) {
   func(name, `&${selector}`)
   func(`group-${name}`, `:merge(.group)${selector} &`)
-  func(`peer-${name}`, `:merge(.group)${selector} ~ &`)
+  func(`peer-${name}`, `:merge(.peer)${selector} ~ &`)
 }
 
 /**
@@ -28,91 +28,95 @@ function addMatchVariant(func: PluginAPI['matchVariant'], name: string) {
 
 const arkuiVariants = plugin(({ addVariant, matchVariant }: PluginAPI) => {
   /** Add the variant to the data state open */
-  overideVariant(addVariant, 'data-state-open', ':is([open],[data-open],[data-state=open])')
+  overrideVariant(addVariant, 'data-state-open', ':is([open],[data-open],[data-state=open])')
   /** Add the variant to the data state closed */
-  overideVariant(addVariant, 'data-state-closed', ':is([closed],[data-closed],[data-state=closed])')
+  overrideVariant(
+    addVariant,
+    'data-state-closed',
+    ':is([closed],[data-closed],[data-state=closed])'
+  )
   /** Add the variant to the data state on */
-  overideVariant(addVariant, 'data-state-on', '[data-state=on]')
+  overrideVariant(addVariant, 'data-state-on', '[data-state=on]')
   /** Add the variant to the data state off */
-  overideVariant(addVariant, 'data-state-off', '[data-state=off]')
+  overrideVariant(addVariant, 'data-state-off', '[data-state=off]')
   /** Add the variant to the data state value under */
-  overideVariant(addVariant, 'data-state-under', '[data-state=under-value]')
+  overrideVariant(addVariant, 'data-state-under', '[data-state=under-value]')
   /** Add the variant to the data state expanded */
-  overideVariant(
+  overrideVariant(
     addVariant,
     'data-expanded',
     ':is([aria-expanded=true],[data-expanded],[data-state=expanded])'
   )
 
   /** Add the variant to the data current presence */
-  overideVariant(addVariant, 'data-current', '[data-current]')
+  overrideVariant(addVariant, 'data-current', '[data-current]')
   /** Add the variant to the data is copied presence */
-  overideVariant(addVariant, 'data-copied', '[data-copied]')
+  overrideVariant(addVariant, 'data-copied', '[data-copied]')
   /** Add the variant to the data inview presence*/
-  overideVariant(addVariant, 'data-inview', '[data-inview]')
+  overrideVariant(addVariant, 'data-inview', '[data-inview]')
   /** Add the variant to the data today presence */
-  overideVariant(addVariant, 'data-today', '[data-today]')
+  overrideVariant(addVariant, 'data-today', '[data-today]')
   /** Add the variant to the data highlighted presence */
-  overideVariant(addVariant, 'data-highlighted', '[data-highlighted]')
+  overrideVariant(addVariant, 'data-highlighted', '[data-highlighted]')
   /** Add the variant to the data dragging presence */
-  overideVariant(addVariant, 'data-dragging', '[data-dragging]')
+  overrideVariant(addVariant, 'data-dragging', '[data-dragging]')
   /** Add the variant to the data complete presence */
-  overideVariant(addVariant, 'data-complete', '[data-complete]')
+  overrideVariant(addVariant, 'data-complete', '[data-complete]')
   /** Add the variant to the data incomplete presence */
-  overideVariant(addVariant, 'data-incomplete', '[data-incomplete]')
+  overrideVariant(addVariant, 'data-incomplete', '[data-incomplete]')
   /** Add the variant to the data empty presence */
-  overideVariant(addVariant, 'data-empty', '[data-empty]')
+  overrideVariant(addVariant, 'data-empty', '[data-empty]')
   /** Add the variant to the data mounted presence */
-  overideVariant(addVariant, 'data-mounted', '[data-mounted]')
+  overrideVariant(addVariant, 'data-mounted', '[data-mounted]')
   /** Add the variant to the data paused presence */
-  overideVariant(addVariant, 'data-paused', '[data-paused]')
+  overrideVariant(addVariant, 'data-paused', '[data-paused]')
   /** Add the variant to the data overlap presence */
-  overideVariant(addVariant, 'data-overlap', '[data-overlap]')
+  overrideVariant(addVariant, 'data-overlap', '[data-overlap]')
 
   /** Add the variant to the html state selected */
-  overideVariant(addVariant, 'selected', ':is([aria-selected=true],[data-selected])')
+  overrideVariant(addVariant, 'selected', ':is([aria-selected=true],[data-selected])')
   /** Add the variant to the html state pressed */
-  overideVariant(addVariant, 'pressed', ':is([aria-pressed=true],[data-pressed])')
+  overrideVariant(addVariant, 'pressed', ':is([aria-pressed=true],[data-pressed])')
   /** Add the variant to the html state invalid */
-  overideVariant(addVariant, 'invalid', ':is(:invalid,[invalid],[aria-invalid])')
+  overrideVariant(addVariant, 'invalid', ':is(:invalid,[invalid],[aria-invalid])')
   /** Add the variant to the html state hidden */
-  overideVariant(addVariant, 'hidden', '[hidden]')
+  overrideVariant(addVariant, 'hidden', '[hidden]')
   /** Add the variant to the html state hover */
-  overideVariant(addVariant, 'hover', ':is(:hover,[data-hover])')
+  overrideVariant(addVariant, 'hover', ':is(:hover,[data-hover])')
   /** Add the variant to the html state disabled */
-  overideVariant(addVariant, 'disabled', ':is(:disabled,[disabled],[data-disabled])')
+  overrideVariant(addVariant, 'disabled', ':is(:disabled,[disabled],[data-disabled])')
   /** Add the variant to the html state readonly */
-  overideVariant(addVariant, 'read-only', ':is(:read-only,[readonly],[data-readonly])')
+  overrideVariant(addVariant, 'read-only', ':is(:read-only,[readonly],[data-readonly])')
   /** Add the variant to the html state checked */
-  overideVariant(
+  overrideVariant(
     addVariant,
     'checked',
     ':is(:checked,[checked],[data-checked],[aria-checked=true],[data-state=checked])'
   )
   /** Add the variant to the html state unchecked */
-  overideVariant(
+  overrideVariant(
     addVariant,
     'unchecked',
     ':is([data-unchecked],[aria-checked=false],[data-state=unchecked])'
   )
   /** Add the variant to the html state indeterminate */
-  overideVariant(
+  overrideVariant(
     addVariant,
     'indeterminate',
     ':is(:indeterminate,[data-indeterminate],[aria-checked=mixed],[data-state=indeterminate])'
   )
   /** Add the variant to the html state placeholder-shown */
-  overideVariant(
+  overrideVariant(
     addVariant,
     'placeholder-shown',
     ':is(:placeholder-shown,[data-placeholder-shown])'
   )
   /** Add the variant to the html state focus */
-  overideVariant(addVariant, 'focus', ':is(:focus,[data-focus])')
+  overrideVariant(addVariant, 'focus', ':is(:focus,[data-focus])')
   /** Add the variant to the html state focus-visible */
-  overideVariant(addVariant, 'focus-visible', ':is(:focus-visible,[data-focus-visible])')
+  overrideVariant(addVariant, 'focus-visible', ':is(:focus-visible,[data-focus-visible])')
   /** Add the variant to the html state active */
-  overideVariant(addVariant, 'active', ':is(:active,[data-active])')
+  overrideVariant(addVariant, 'active', ':is(:active,[data-active])')
 
   /** Add the variant to the data scope */
   addMatchVariant(matchVariant, 'data-scope')
