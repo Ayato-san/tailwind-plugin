@@ -3,8 +3,8 @@
   <h1>Tailwind Plugin</h1>
   <p>My custom tailwind plugin</p>
   <div>
-    <a href="https://github.com/Ayato-san/tailwind-plugin/blob/main/LICENSE.md"><img alt="GitHub License" src="https://img.shields.io/github/license/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
-    <a href="#"><img alt="NPM Version" src="https://img.shields.io/github/package-json/version/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
+    <a href="https://github.com/Ayato-san/tailwind-plugin/blob/2.x/LICENSE.md"><img alt="GitHub License" src="https://img.shields.io/github/license/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
+    <a href="https://github.com/Ayato-san/tailwind-plugin/releases/latest"><img alt="NPM Version" src="https://img.shields.io/github/package-json/version/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
     <a href="https://github.com/Ayato-san/tailwind-plugin/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
     <a href="#"><img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
   </div>
