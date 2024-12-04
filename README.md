@@ -1,6 +1,14 @@
-<p align="center">
+<div align="center">
   <img src="https://github.com/Ayato-san/tailwind-plugin/assets/71392060/676a589a-94b7-4d19-bcd2-83f67423858f">
-</p>
+  <h1>Tailwind Plugin</h1>
+  <p>My custom tailwind plugin</p>
+  <div>
+    <a href="https://github.com/Ayato-san/tailwind-plugin/blob/main/LICENSE.md"><img alt="GitHub License" src="https://img.shields.io/github/license/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
+    <a href="#"><img alt="NPM Version" src="https://img.shields.io/github/package-json/version/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
+    <a href="https://github.com/Ayato-san/tailwind-plugin/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
+    <a href="#"><img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/Ayato-san/tailwind-plugin?style=for-the-badge"></a>
+  </div>
+</div>
 
 ## Features
 
@@ -18,23 +26,21 @@
 - Compatible with modern web development practices
 - Comprehensive documentation and easy integration
 
-### Install
+### Installation
 
-- with NPM
-
-  ```bash
-  npm install -D tailwindcss @ayato-san/tailwind-plugin
+- with npm
+  ```sh
+  npm install -D @ayato-san/tailwind-plugin
   ```
 
 - with pnpm
-
-  ```bash
-  pnpm add -D tailwindcss @ayato-san/tailwind-plugin
+  ```sh
+  pnpm install -D @ayato-san/tailwind-plugin
   ```
 
 - with yarn
-  ```bash
-  yarn add -D tailwindcss @ayato-san/tailwind-plugin
+  ```sh
+  yarn add -D @ayato-san/tailwind-plugin
   ```
 
 ### Default Utilities
